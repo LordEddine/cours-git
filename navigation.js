@@ -1,21 +1,29 @@
 // Navigation system for slides
 (function() {
-  const TOTAL_SLIDES = 33;
+  // Liste ordonnée de toutes les slides
+  const SLIDES = [
+    'slide01.html', 'slide02.html', 'slide03.html', 'slide04.html', 'slide05.html',
+    'slide06.html', 'slide07.html', 'slide08.html', 'slide09.html', 'slide10.html',
+    'slide11.html', 'slide12.html', 'slide13.html', 'slide14.html', 'slide14b.html',
+    'slide15.html', 'slide16.html', 'slide17.html', 'slide18.html', 'slide19.html',
+    'slide20.html', 'slide21.html', 'slide22.html', 'slide23.html', 'slide24.html',
+    'slide25.html', 'slide26.html', 'slide27.html', 'slide28.html', 'slide29.html',
+    'slide30.html', 'slide31.html', 'slide32.html', 'slide33.html'
+  ];
   
-  // Get current slide number from filename
+  const TOTAL_SLIDES = SLIDES.length;
+  
+  // Get current slide from filename
   const currentFile = window.location.pathname.split('/').pop();
-  const match = currentFile.match(/slide(\d+)\.html/);
-  const currentSlide = match ? parseInt(match[1]) : 1;
+  const currentIndex = SLIDES.indexOf(currentFile);
+  const currentSlide = currentIndex !== -1 ? currentIndex + 1 : 1;
   
   // Calculate progress
   const progress = Math.round((currentSlide / TOTAL_SLIDES) * 100);
   
-  // Format slide number with leading zero
-  const formatSlide = (num) => num.toString().padStart(2, '0');
-  
   // Get previous and next slide URLs
-  const prevSlide = currentSlide > 1 ? `slide${formatSlide(currentSlide - 1)}.html` : null;
-  const nextSlide = currentSlide < TOTAL_SLIDES ? `slide${formatSlide(currentSlide + 1)}.html` : null;
+  const prevSlide = currentIndex > 0 ? SLIDES[currentIndex - 1] : null;
+  const nextSlide = currentIndex < SLIDES.length - 1 ? SLIDES[currentIndex + 1] : null;
   
   // Create progress bar
   const progressBar = document.createElement('div');
@@ -58,7 +66,7 @@
     } else if (e.key === 'Home') {
       window.location.href = 'slide01.html';
     } else if (e.key === 'End') {
-      window.location.href = `slide${formatSlide(TOTAL_SLIDES)}.html`;
+      window.location.href = SLIDES[SLIDES.length - 1];
     }
   });
   

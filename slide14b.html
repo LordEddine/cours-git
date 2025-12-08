@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <h1 class="text-4xl font-display text-white mb">Stratégies de branches</h1>
+    <div class="accent-line mb"></div>
+    <p class="text-base text-muted">Organiser le travail d'équipe avec des conventions de branches</p>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg git-purple mb">🌊 Git Flow</h2>
+      <p class="text-sm text-muted mb">Stratégie complète avec rôles précis :</p>
+      <ul class="list-modern">
+        <li><span class="list-icon git-green">●</span> <code class="code-inline">main</code> : Code en production</li>
+        <li><span class="list-icon git-blue">●</span> <code class="code-inline">develop</code> : Intégration des features</li>
+        <li><span class="list-icon git-orange">●</span> <code class="code-inline">feature/*</code> : Nouvelles fonctionnalités</li>
+        <li><span class="list-icon git-purple">●</span> <code class="code-inline">release/*</code> : Préparation des versions</li>
+        <li><span class="list-icon git-red">●</span> <code class="code-inline">hotfix/*</code> : Corrections urgentes</li>
+      </ul>
+      <div class="badge badge-secondary mt">Projets complexes</div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg git-blue mb">🚀 GitHub Flow</h2>
+      <p class="text-sm text-muted mb">Approche simplifiée et moderne :</p>
+      <ol class="list-modern">
+        <li><span class="list-icon">1</span> <code class="code-inline">main</code> toujours déployable</li>
+        <li><span class="list-icon">2</span> Créer une branche par feature</li>
+        <li><span class="list-icon">3</span> Commits réguliers + Push</li>
+        <li><span class="list-icon">4</span> Ouvrir une Pull Request</li>
+        <li><span class="list-icon">5</span> Review + Discussion</li>
+        <li><span class="list-icon">6</span> Merge dans main</li>
+      </ol>
+      <div class="badge badge-accent mt">Recommandé ✓</div>
+    </div>
+  </div>
+  
+  <div class="highlight-box mt">
+    <p class="text-sm text-white text-center">💡 <strong>GitHub Flow</strong> est idéal pour débuter et pour le déploiement continu</p>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

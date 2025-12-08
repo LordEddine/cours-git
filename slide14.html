@@ -5,8 +5,9 @@
   <div class="slide-header mb">
     <div class="row items-center gap">
       <span class="badge badge-accent">EXERCICE 2</span>
+      <span class="text-muted">15 minutes</span>
     </div>
-    <h1 class="text-3xl font-display text-white mb-sm">Travail avec les branches</h1>
+    <h1 class="text-3xl font-display text-white mb-sm">Branches et fusion</h1>
     <div class="accent-line"></div>
   </div>
   
@@ -14,29 +15,29 @@
     <div class="card-modern">
       <h2 class="text-lg text-primary mb">Instructions</h2>
       <ol class="list-modern">
-        <li><span class="list-icon">1</span> Créer branche <code class="code-inline">feature-calculatrice</code></li>
-        <li><span class="list-icon">2</span> Créer <code class="code-inline">calculatrice.py</code> avec additionner/soustraire</li>
-        <li><span class="list-icon">3</span> Commit : "Ajout calculatrice"</li>
-        <li><span class="list-icon">4</span> Ajouter multiplier et diviser</li>
-        <li><span class="list-icon">5</span> Commit : "Ajout multiplication et division"</li>
-        <li><span class="list-icon">6</span> Retourner sur <code class="code-inline">main</code> et merger</li>
+        <li><span class="list-icon">1</span> Créer branche <code class="code-inline">feature-utils</code></li>
+        <li><span class="list-icon">2</span> Créer <code class="code-inline">utils.py</code> (voir code) + commit</li>
+        <li><span class="list-icon">3</span> Retour sur <code class="code-inline">main</code>, créer <code class="code-inline">feature-models</code></li>
+        <li><span class="list-icon">4</span> Créer <code class="code-inline">models.py</code> (voir code) + commit</li>
+        <li><span class="list-icon">5</span> Retour <code class="code-inline">main</code>, merger <code class="code-inline">feature-utils</code></li>
+        <li><span class="list-icon">6</span> Puis merger <code class="code-inline">feature-models</code></li>
       </ol>
+      <div class="highlight-box mt">
+        <p class="text-xs text-white"><strong>Bonus</strong> : Créez un conflit volontaire et résolvez-le !</p>
+      </div>
     </div>
     
     <div class="card-modern">
-      <h2 class="text-lg text-primary mb">Code attendu</h2>
-      <div class="code-block">
-        <div class="git-blue">def</div> <div class="text-white">additionner(a, b):</div>
-        <div class="text-white">    <span class="git-purple">return</span> a + b</div>
+      <h2 class="text-lg text-primary mb">utils.py</h2>
+      <div class="code-block" style="font-size: 11px;">
+        <div class="git-blue">def</div> <span class="text-white">valider_email(email: <span class="git-green">str</span>) -> <span class="git-green">bool</span>:</span>
+        <div class="text-muted">    """Vérifie format email."""</div>
+        <div class="text-white">    <span class="git-purple">return</span> <span class="git-orange">"@"</span> <span class="git-red">in</span> email</div>
         <br>
-        <div class="git-blue">def</div> <div class="text-white">soustraire(a, b):</div>
-        <div class="text-white">    <span class="git-purple">return</span> a - b</div>
-        <br>
-        <div class="git-blue">def</div> <div class="text-white">multiplier(a, b):</div>
-        <div class="text-white">    <span class="git-purple">return</span> a * b</div>
-        <br>
-        <div class="git-blue">def</div> <div class="text-white">diviser(a, b):</div>
-        <div class="text-white">    <span class="git-purple">return</span> a / b <span class="git-red">if</span> b != <span class="git-orange">0</span> <span class="git-red">else</span> <span class="git-green">"Erreur"</span></div>
+        <div class="git-blue">def</div> <span class="text-white">formater_tel(num: <span class="git-green">str</span>) -> <span class="git-green">str</span>:</span>
+        <div class="text-muted">    """Formate un téléphone."""</div>
+        <div class="text-white">    chiffres = <span class="git-orange">""</span>.join(c <span class="git-red">for</span> c <span class="git-red">in</span> num <span class="git-red">if</span> c.isdigit())</div>
+        <div class="text-white">    <span class="git-purple">return</span> f<span class="git-green">"{chiffres[:2]} {chiffres[2:4]}..."</span></div>
       </div>
     </div>
   </div>
