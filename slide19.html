@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Forks et Contributions Open Source</h1>
+    <div class="accent-line mb"></div>
+    <p class="text-base text-muted">Un fork est une copie complète d'un dépôt sous votre compte GitHub.</p>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Workflow de contribution</h2>
+      <ol class="list-modern">
+        <li><span class="list-icon git-blue">1</span> Fork le projet sur GitHub</li>
+        <li><span class="list-icon git-green">2</span> Clone votre fork en local</li>
+        <li><span class="list-icon git-purple">3</span> Créer une branche de travail</li>
+        <li><span class="list-icon git-orange">4</span> Faire vos modifications + commit</li>
+        <li><span class="list-icon">5</span> Push vers votre fork</li>
+        <li><span class="list-icon git-green">6</span> Créer une Pull Request vers l'original</li>
+      </ol>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Synchroniser avec l'original</h2>
+      <div class="terminal-modern">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Ajouter l'original comme "upstream"</div>
+          <div><span class="prompt">$</span> <span class="command">git remote add upstream [URL_ORIGINAL]</span></div>
+          <br>
+          <div class="text-muted"># Récupérer les mises à jour</div>
+          <div><span class="prompt">$</span> <span class="command">git fetch upstream</span></div>
+          <div><span class="prompt">$</span> <span class="command">git merge upstream/main</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Installation et configuration</h1>
+    <div class="accent-line mb"></div>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-xl text-primary mb">Installation</h2>
+      <div class="mb">
+        <span class="badge badge-secondary mb-sm">Windows</span>
+        <p class="text-sm text-muted">Télécharger sur <strong class="text-white">git-scm.com</strong></p>
+      </div>
+      <div class="mb">
+        <span class="badge badge-secondary mb-sm">macOS</span>
+        <div class="terminal-modern">
+          <div class="terminal-content-modern">
+            <div><span class="prompt">$</span> <span class="command">brew install git</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="badge badge-secondary mb-sm">Linux (Debian/Ubuntu)</span>
+        <div class="terminal-modern">
+          <div class="terminal-content-modern">
+            <div><span class="prompt">$</span> <span class="command">sudo apt install git</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-xl text-primary mb">Configuration initiale</h2>
+      <div class="terminal-modern">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Configurer votre identité</div>
+          <div><span class="prompt">$</span> <span class="command">git config --global user.name "Votre Nom"</span></div>
+          <div><span class="prompt">$</span> <span class="command">git config --global user.email "email@example.com"</span></div>
+          <br>
+          <div class="text-muted"># Vérifier l'installation</div>
+          <div><span class="prompt">$</span> <span class="command">git --version</span></div>
+          <div><span class="prompt">$</span> <span class="command">git config --list</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

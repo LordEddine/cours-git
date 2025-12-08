@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <h1 class="text-4xl font-display text-white mb">Récapitulatif des commandes</h1>
+    <div class="accent-line mb"></div>
+  </div>
+  
+  <div class="slide-content three-column gap">
+    <div class="card-modern">
+      <h2 class="text-base git-green mb">Basiques</h2>
+      <div class="text-sm text-muted">
+        <p><code class="code-inline">git init</code> Démarrer un dépôt</p>
+        <p><code class="code-inline">git add .</code> Stager tout</p>
+        <p><code class="code-inline">git commit -m ""</code> Commiter</p>
+        <p><code class="code-inline">git status</code> Voir l'état</p>
+        <p><code class="code-inline">git log --oneline</code> Historique</p>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-base git-blue mb">Branches</h2>
+      <div class="text-sm text-muted">
+        <p><code class="code-inline">git branch</code> Lister</p>
+        <p><code class="code-inline">git checkout -b x</code> Créer</p>
+        <p><code class="code-inline">git merge x</code> Fusionner</p>
+        <p><code class="code-inline">git branch -d x</code> Supprimer</p>
+        <p><code class="code-inline">git rebase main</code> Rebaser</p>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-base git-purple mb">Remote</h2>
+      <div class="text-sm text-muted">
+        <p><code class="code-inline">git clone [url]</code> Cloner</p>
+        <p><code class="code-inline">git push</code> Envoyer</p>
+        <p><code class="code-inline">git pull</code> Récupérer</p>
+        <p><code class="code-inline">git fetch</code> Télécharger</p>
+        <p><code class="code-inline">git remote -v</code> Voir remotes</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="highlight-box mt">
+    <p class="text-sm text-white text-center">💡 <strong>Aide rapide</strong> : <code class="code-inline">git help [commande]</code> ou <code class="code-inline">git [commande] --help</code></p>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

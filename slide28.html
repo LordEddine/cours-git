@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Messages de commit efficaces</h1>
+    <div class="accent-line mb"></div>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg git-red mb">✗ Mauvais exemples</h2>
+      <div class="code-block mb">
+        <div class="git-red">"fix"</div>
+        <div class="git-red">"update"</div>
+        <div class="git-red">"changes"</div>
+        <div class="git-red">"asdfgh"</div>
+        <div class="git-red">"WIP"</div>
+      </div>
+      <p class="text-sm text-muted">Ne dit rien sur ce qui a changé !</p>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg git-green mb">✓ Bons exemples</h2>
+      <div class="code-block mb">
+        <div class="git-green">"feat: add user authentication"</div>
+        <div class="git-blue">"fix: resolve login crash on mobile"</div>
+        <div class="git-purple">"docs: update installation guide"</div>
+        <div class="git-orange">"refactor: simplify validation logic"</div>
+        <div class="text-white">"test: add unit tests for calculator"</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="highlight-box mt">
+    <h3 class="text-base text-white mb-sm">🎯 Convention Conventional Commits</h3>
+    <p class="text-sm text-muted"><code class="code-inline">type(scope): description</code> - feat, fix, docs, style, refactor, test, chore</p>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

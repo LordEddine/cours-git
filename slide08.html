@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Exemple pratique Python</h1>
+    <div class="accent-line mb"></div>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Terminal</h2>
+      <div class="terminal-modern">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Créer et initialiser le projet</div>
+          <div><span class="prompt">$</span> <span class="command">mkdir calculatrice-python</span></div>
+          <div><span class="prompt">$</span> <span class="command">cd calculatrice-python</span></div>
+          <div><span class="prompt">$</span> <span class="command git-green">git init</span></div>
+          <br>
+          <div class="text-muted"># Créer et commiter</div>
+          <div><span class="prompt">$</span> <span class="command">touch main.py</span></div>
+          <div><span class="prompt">$</span> <span class="command">git add main.py</span></div>
+          <div><span class="prompt">$</span> <span class="command git-green">git commit -m "feat: structure initiale"</span></div>
+          <div class="output git-green">[main abc1234] feat: structure initiale</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">main.py</h2>
+      <div class="code-block">
+        <div class="text-muted">"""Module principal du projet."""</div>
+        <br>
+        <div class="git-blue">def</div> <span class="text-white">main():</span>
+        <div class="text-muted">    """Point d'entrée du programme."""</div>
+        <div class="text-white">    print(<span class="git-green">"Bienvenue!"</span>)</div>
+        <br>
+        <div class="git-purple">if</div> <span class="text-white">__name__ == <span class="git-green">"__main__"</span>:</span>
+        <div class="text-white">    main()</div>
+      </div>
+      <div class="badge badge-accent mt">✅ Premier commit réussi!</div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

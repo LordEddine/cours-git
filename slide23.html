@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Git Stash - Travail temporaire</h1>
+    <div class="accent-line mb"></div>
+    <p class="text-base text-muted">Stash sauvegarde temporairement vos modifications non commitées.</p>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Commandes stash</h2>
+      <div class="terminal-modern">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Sauvegarder les modifications</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git stash</span></div>
+          <div class="output">Saved working directory</div>
+          <br>
+          <div class="text-muted"># Avec un message</div>
+          <div><span class="prompt">$</span> <span class="command">git stash push -m "WIP login"</span></div>
+          <br>
+          <div class="text-muted"># Récupérer le stash</div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git stash pop</span></div>
+          <div class="output">Restaure et supprime le stash</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Cas d'utilisation</h2>
+      <ul class="list-modern mb">
+        <li><span class="list-icon">🔄</span> Changer de branche sans commiter</li>
+        <li><span class="list-icon">🚨</span> Hotfix urgent sur une autre branche</li>
+        <li><span class="list-icon">🧪</span> Tester quelque chose rapidement</li>
+        <li><span class="list-icon">📦</span> Pull des changements distants</li>
+      </ul>
+      <div class="terminal-modern">
+        <div class="terminal-content-modern">
+          <div><span class="prompt">$</span> <span class="command">git stash list</span></div>
+          <div class="output">stash@{0}: WIP login</div>
+          <div class="output">stash@{1}: feature tests</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>
+  </div>
+  <script src="navigation.js"></script>
+</body>
+</html>

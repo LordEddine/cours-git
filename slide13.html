@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <h1 class="text-4xl font-display text-white mb">Gestion des conflits</h1>
+    <div class="accent-line mb"></div>
+    <p class="text-base text-muted">Un conflit survient quand deux branches modifient la même ligne du même fichier.</p>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg git-red mb">⚠️ Fichier en conflit</h2>
+      <div class="code-block">
+        <div class="text-muted"># config.py - Fichier en conflit</div>
+        <br>
+        <div class="git-red"><<<<<<< HEAD</div>
+        <div class="text-white">DATABASE_URL = <span class="git-green">"localhost:5432"</span></div>
+        <div class="git-orange">=======</div>
+        <div class="text-white">DATABASE_URL = <span class="git-green">"staging.db:5432"</span></div>
+        <div class="git-red">>>>>>>> feature-staging</div>
+      </div>
+      <p class="text-xs text-muted mt">HEAD = version actuelle | Autre = version à merger</p>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg git-green mb">✅ Résolution</h2>
+      <ol class="list-modern mb">
+        <li><span class="list-icon">1</span> Ouvrir le fichier conflictuel</li>
+        <li><span class="list-icon">2</span> Choisir ou combiner les versions</li>
+        <li><span class="list-icon">3</span> Supprimer les marqueurs <code class="code-inline"><<<<</code></li>
+        <li><span class="list-icon">4</span> Sauvegarder et valider</li>
+      </ol>
+      <div class="terminal-modern">
+        <div class="terminal-content-modern">
+          <div><span class="prompt">$</span> <span class="command">git add config.py</span></div>
+          <div><span class="prompt">$</span> <span class="command">git commit -m "fix: résout conflit DB"</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

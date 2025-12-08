@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Pull Requests (PR)</h1>
+    <div class="accent-line mb"></div>
+    <p class="text-base text-muted">Une PR propose d'intégrer les changements d'une branche dans une autre avec revue de code.</p>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Processus</h2>
+      <ol class="list-modern">
+        <li><span class="list-icon git-green">1</span> Push votre branche vers GitHub</li>
+        <li><span class="list-icon git-blue">2</span> Cliquer "New Pull Request"</li>
+        <li><span class="list-icon git-purple">3</span> Décrire les changements</li>
+        <li><span class="list-icon git-orange">4</span> Demander une review</li>
+        <li><span class="list-icon">5</span> Merger après approbation</li>
+      </ol>
+      <div class="terminal-modern mt">
+        <div class="terminal-content-modern">
+          <div><span class="prompt">$</span> <span class="command git-green">git push -u origin feature-api</span></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Bonnes pratiques PR</h2>
+      <ul class="list-modern">
+        <li><span class="list-icon">✅</span> Titre clair et descriptif</li>
+        <li><span class="list-icon">✅</span> Description détaillée des changements</li>
+        <li><span class="list-icon">✅</span> PR de taille raisonnable (≤ 400 lignes)</li>
+        <li><span class="list-icon">✅</span> Tests passés avant review</li>
+        <li><span class="list-icon">✅</span> Répondre aux commentaires</li>
+      </ul>
+      <div class="highlight-box mt">
+        <p class="text-sm text-white"><strong>Squash and Merge</strong> : Condense tous les commits en un seul</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Manipuler les branches</h1>
+    <div class="accent-line mb"></div>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg git-green mb">Créer et Naviguer</h2>
+      <div class="terminal-modern">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div><span class="prompt">$</span> <span class="command">git branch</span></div>
+          <div class="output">Lister les branches</div>
+          <div><span class="prompt">$</span> <span class="command">git branch feature-api</span></div>
+          <div class="output">Créer une branche</div>
+          <div><span class="prompt">$</span> <span class="command">git checkout feature-api</span></div>
+          <div class="output">Basculer sur la branche</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git checkout -b feature-api</span></div>
+          <div class="output">✅ Créer ET basculer (raccourci)</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg git-blue mb">Fusionner et Supprimer</h2>
+      <div class="terminal-modern">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div><span class="prompt">$</span> <span class="command">git checkout main</span></div>
+          <div class="output">Retourner sur main</div>
+          <div><span class="prompt">$</span> <span class="command git-purple">git merge feature-api</span></div>
+          <div class="output">Fusionner dans main</div>
+          <div><span class="prompt">$</span> <span class="command">git branch -d feature-api</span></div>
+          <div class="output">Supprimer (si fusionnée)</div>
+          <div><span class="prompt">$</span> <span class="command git-red">git branch -D feature-api</span></div>
+          <div class="output">⚠️ Forcer suppression</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

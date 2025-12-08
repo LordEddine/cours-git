@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Git Hooks - Automatisation</h1>
+    <div class="accent-line mb"></div>
+    <p class="text-base text-muted">Scripts exécutés automatiquement lors d'événements Git.</p>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Hooks courants</h2>
+      <ul class="list-modern">
+        <li><span class="list-icon git-green">📝</span> <code class="code-inline">pre-commit</code> : Avant chaque commit</li>
+        <li><span class="list-icon git-blue">✉️</span> <code class="code-inline">commit-msg</code> : Vérifier le message</li>
+        <li><span class="list-icon git-purple">🚀</span> <code class="code-inline">pre-push</code> : Avant chaque push</li>
+        <li><span class="list-icon git-orange">📥</span> <code class="code-inline">post-merge</code> : Après un merge</li>
+      </ul>
+      <p class="text-xs text-muted mt">Emplacement : <code class="code-inline">.git/hooks/</code></p>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Exemple pre-commit</h2>
+      <div class="code-block">
+        <div class="text-muted">#!/bin/bash</div>
+        <div class="text-muted"># .git/hooks/pre-commit</div>
+        <br>
+        <div class="git-green">echo</div> <div class="text-white">"Vérification du code..."</div>
+        <br>
+        <div class="text-muted"># Lancer les tests</div>
+        <div class="text-white">python -m pytest</div>
+        <br>
+        <div class="text-muted"># Vérifier le formatage</div>
+        <div class="text-white">black --check .</div>
+      </div>
+      <div class="badge badge-accent mt">Qualité automatique!</div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

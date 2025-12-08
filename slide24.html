@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Modifier le dernier commit</h1>
+    <div class="accent-line mb"></div>
+    <p class="text-base text-muted">Corriger une erreur dans le commit précédent sans créer un nouveau commit.</p>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">git commit --amend</h2>
+      <div class="terminal-modern">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Modifier le message du dernier commit</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git commit --amend -m "Nouveau message"</span></div>
+          <br>
+          <div class="text-muted"># Ajouter des fichiers oubliés</div>
+          <div><span class="prompt">$</span> <span class="command">git add fichier_oublie.py</span></div>
+          <div><span class="prompt">$</span> <span class="command git-green">git commit --amend --no-edit</span></div>
+          <div class="output">Ajoute sans changer le message</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg git-orange mb">⚠️ Attention</h2>
+      <div class="highlight-box mb">
+        <p class="text-sm text-white"><strong>Jamais après un push !</strong></p>
+        <p class="text-xs text-muted">Amend réécrit l'historique. Si déjà pushé, cela créera des conflits.</p>
+      </div>
+      <ul class="list-modern">
+        <li><span class="list-icon git-green">✅</span> Commit local uniquement</li>
+        <li><span class="list-icon git-green">✅</span> Avant de partager</li>
+        <li><span class="list-icon git-red">✗</span> Après git push</li>
+        <li><span class="list-icon git-red">✗</span> Branches partagées</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>
+  </div>
+  <script src="navigation.js"></script>
+</body>
+</html>

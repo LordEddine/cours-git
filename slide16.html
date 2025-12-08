@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Dépôts distants (remotes)</h1>
+    <div class="accent-line mb"></div>
+    <p class="text-base text-muted">Un remote est une version de votre projet hébergée sur Internet (GitHub, GitLab...).</p>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg git-green mb">Configurer un remote</h2>
+      <div class="terminal-modern">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div><span class="prompt">$</span> <span class="command">git remote add origin [URL]</span></div>
+          <div class="output">Ajouter un remote nommé "origin"</div>
+          <div><span class="prompt">$</span> <span class="command">git remote -v</span></div>
+          <div class="output">Voir les remotes configurés</div>
+          <div><span class="prompt">$</span> <span class="command">git remote remove origin</span></div>
+          <div class="output">Supprimer un remote</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg git-blue mb">Synchroniser</h2>
+      <div class="terminal-modern">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div><span class="prompt">$</span> <span class="command git-green">git push -u origin main</span></div>
+          <div class="output">Envoyer + définir upstream</div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git pull origin main</span></div>
+          <div class="output">Récupérer + fusionner</div>
+          <div><span class="prompt">$</span> <span class="command">git fetch origin</span></div>
+          <div class="output">Récupérer sans fusionner</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-accent">EXERCICE 1</span>
+      <span class="text-muted">10 minutes</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">Premiers commits Python</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Instructions</h2>
+      <ol class="list-modern">
+        <li><span class="list-icon">1</span> Créer dossier <code class="code-inline">exercice-git</code> et <code class="code-inline">git init</code></li>
+        <li><span class="list-icon">2</span> Créer <code class="code-inline">main.py</code> avec fonction main()</li>
+        <li><span class="list-icon">3</span> Premier commit : "Structure initiale"</li>
+        <li><span class="list-icon">4</span> Ajouter fonction <code class="code-inline">saluer(nom: str)</code></li>
+        <li><span class="list-icon">5</span> Second commit : "Ajout fonction saluer"</li>
+        <li><span class="list-icon">6</span> Vérifier avec <code class="code-inline">git log --oneline</code></li>
+      </ol>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Code attendu</h2>
+      <div class="code-block">
+        <div class="git-blue">def</div> <div class="text-white">saluer(nom: <span class="git-green">str</span>) -> <span class="git-green">str</span>:</div>
+        <div class="text-muted">    """Retourne un message de salutation."""</div>
+        <div class="text-white">    <span class="git-purple">return</span> f"Bonjour, {nom} !"</div>
+        <br>
+        <div class="git-blue">def</div> <div class="text-white">main():</div>
+        <div class="text-white">    print("Bienvenue!")</div>
+        <div class="text-white">    print(saluer(<span class="git-orange">"Utilisateur"</span>))</div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

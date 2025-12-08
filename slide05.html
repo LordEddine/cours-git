@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Les trois zones de Git</h1>
+    <div class="accent-line mb"></div>
+    <p class="text-base text-muted">Comprendre le flux de travail Git</p>
+  </div>
+  
+  <div class="slide-content">
+    <div class="row gap items-center justify-center mb-lg">
+      <div class="card-modern text-center" style="min-width: 180px;">
+        <div class="icon-circle mb git-blue" style="margin: 0 auto;">📂</div>
+        <h2 class="text-lg git-blue mb-sm">Working Directory</h2>
+        <p class="text-xs text-muted">Répertoire de travail</p>
+        <p class="text-xs text-muted">Fichiers modifiés</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="badge badge-accent mb-sm">git add</div>
+        <div class="text-2xl git-green">→</div>
+      </div>
+      
+      <div class="card-modern text-center" style="min-width: 180px;">
+        <div class="icon-circle mb git-orange" style="margin: 0 auto;">📦</div>
+        <h2 class="text-lg git-orange mb-sm">Staging Area</h2>
+        <p class="text-xs text-muted">Index</p>
+        <p class="text-xs text-muted">Fichiers prêts</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="badge badge-accent mb-sm">git commit</div>
+        <div class="text-2xl git-green">→</div>
+      </div>
+      
+      <div class="card-modern text-center" style="min-width: 180px;">
+        <div class="icon-circle mb git-green" style="margin: 0 auto;">🗄️</div>
+        <h2 class="text-lg git-green mb-sm">Repository</h2>
+        <p class="text-xs text-muted">Dépôt .git</p>
+        <p class="text-xs text-muted">Historique permanent</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

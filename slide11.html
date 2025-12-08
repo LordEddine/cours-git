@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb-xl">
+    <h1 class="text-4xl font-display text-white mb">Comprendre les branches</h1>
+    <div class="accent-line mb"></div>
+    <p class="text-base text-muted">Une branche est un pointeur mobile vers un commit. Créer une branche = créer une timeline parallèle.</p>
+  </div>
+  
+  <div class="slide-content three-column gap-lg">
+    <div class="card-modern text-center">
+      <div class="icon-circle mb git-green" style="margin: 0 auto;">🌳</div>
+      <h2 class="text-xl text-accent mb-sm">main</h2>
+      <p class="text-sm text-muted">Branche principale</p>
+      <p class="text-xs text-muted">Code stable et déployable</p>
+      <div class="badge badge-accent mt">Production</div>
+    </div>
+    
+    <div class="card-modern text-center">
+      <div class="icon-circle mb git-blue" style="margin: 0 auto;">✨</div>
+      <h2 class="text-xl git-blue mb-sm">feature</h2>
+      <p class="text-sm text-muted">Branche de fonctionnalité</p>
+      <p class="text-xs text-muted">Développement isolé</p>
+      <div class="badge badge-secondary mt">En cours</div>
+    </div>
+    
+    <div class="card-modern text-center">
+      <div class="icon-circle mb git-orange" style="margin: 0 auto;">📍</div>
+      <h2 class="text-xl text-primary mb-sm">HEAD</h2>
+      <p class="text-sm text-muted">Pointeur spécial</p>
+      <p class="text-xs text-muted">Votre position actuelle</p>
+      <div class="badge badge-primary mt">Vous êtes ici</div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>
