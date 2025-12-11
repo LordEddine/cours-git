@@ -6,14 +6,14 @@
     <div class="row items-center gap">
       <span class="badge badge-primary">PARAMÈTRES</span>
     </div>
-    <h1 class="text-3xl font-display text-white mb-sm">🌀 --abort / --continue & 🧹 -a</h1>
+    <h1 class="text-3xl font-display text-white mb-sm">🌀 --abort & 🧹 -a</h1>
     <div class="accent-line"></div>
   </div>
   
   <div class="slide-content two-column gap-xl">
     <div class="card-modern">
-      <h2 class="text-lg text-primary mb">--abort / --continue — Gestion des conflits</h2>
-      <p class="text-sm text-muted mb">Lors d'un conflit (rebase ou merge), Git te demande quoi faire</p>
+      <h2 class="text-lg text-primary mb">--abort — Annuler une opération</h2>
+      <p class="text-sm text-muted mb">Lors d'un conflit (merge), tu peux tout annuler</p>
       
       <div class="terminal-modern mb-lg">
         <div class="terminal-header-modern">
@@ -22,11 +22,7 @@
           <div class="terminal-dot terminal-dot-green"></div>
         </div>
         <div class="terminal-content-modern">
-          <div class="text-muted"># Pendant un rebase</div>
-          <div><span class="prompt">$</span> <span class="command git-green">git rebase --continue</span> <span class="text-muted"># Continuer</span></div>
-          <div><span class="prompt">$</span> <span class="command git-orange">git rebase --abort</span> <span class="text-muted"># Annuler</span></div>
-          <br>
-          <div class="text-muted"># Pendant un merge</div>
+          <div class="text-muted"># Pendant un merge avec conflits</div>
           <div><span class="prompt">$</span> <span class="command git-orange">git merge --abort</span> <span class="text-muted"># Annuler</span></div>
           <br>
           <div class="text-muted"># Pendant un cherry-pick</div>
@@ -37,7 +33,7 @@
       
       <div class="highlight-box">
         <p class="text-sm text-white"><strong>💡 Astuce</strong></p>
-        <p class="text-xs text-muted"><code>--continue</code> = rejoue le commit suivant<br><code>--abort</code> = revient à l'état initial</p>
+        <p class="text-xs text-muted"><code>--abort</code> revient à l'état avant l'opération.<br>Utile quand les conflits sont trop complexes!</p>
       </div>
     </div>
     
