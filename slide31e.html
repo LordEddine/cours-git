@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-accent">ÉTAPE 5</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🌿 Branche feature-manager</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content">
+    <div class="card-modern mb">
+      <h2 class="text-lg text-primary mb">🔀 Créer la nouvelle branche</h2>
+      <div class="code-block">
+        <pre class="text-sm">
+# S'assurer d'être sur main à jour
+git checkout main
+git pull
+
+# Créer la nouvelle branche
+git checkout -b feature-manager</pre>
+      </div>
+    </div>
+    
+    <div class="two-column gap-xl">
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">📦 Créer task_manager.py</h2>
+        <p class="text-sm text-muted mb">Créez le fichier dans VS Code :</p>
+        <div class="code-block">
+          <pre class="text-sm">
+from task import Task
+
+class TaskManager:
+    """Gestionnaire de tâches."""
+    
+    def __init__(self):
+        self.tasks = []
+    
+    def add_task(self, title, description=""):
+        """Ajoute une nouvelle tâche."""
+        task = Task(title, description)
+        self.tasks.append(task)
+        return task
+    
+    def get_pending_tasks(self):
+        """Retourne les tâches non complétées."""
+        return [t for t in self.tasks 
+                if not t.completed]
+    
+    def get_completed_tasks(self):
+        """Retourne les tâches complétées."""
+        return [t for t in self.tasks 
+                if t.completed]
+    
+    def complete_task(self, index):
+        """Marque une tâche comme complétée."""
+        if 0 <= index < len(self.tasks):
+            self.tasks[index].complete()
+            return True
+        return False
+    
+    def display_all(self):
+        """Affiche toutes les tâches."""
+        for i, task in enumerate(self.tasks):
+            print(f"{i}. {task}")</pre>
+        </div>
+      </div>
+      
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">💾 Commit</h2>
+        <div class="code-block">
+          <pre class="text-sm">
+git add task_manager.py
+git commit -m "feat: add TaskManager class"</pre>
+        </div>
+        
+        <div class="highlight-box mt" style="background: rgba(74, 222, 128, 0.1); border-color: #4ade80;">
+          <p class="text-sm" style="color: #4ade80;">✅ Commit 3/5 complété !</p>
+        </div>
+        
+        <h2 class="text-lg text-primary mb mt">🧪 Créer main.py (tests)</h2>
+        <div class="code-block">
+          <pre class="text-sm">
+from task_manager import TaskManager
+
+# Créer le gestionnaire
+manager = TaskManager()
+
+# Ajouter des tâches
+manager.add_task("Apprendre Git", 
+                 "Suivre le cours")
+manager.add_task("Faire l'exercice")
+manager.add_task("Réviser pour l'exam")
+
+# Compléter une tâche
+manager.complete_task(0)
+
+# Afficher
+print("=== Mes tâches ===")
+manager.display_all()</pre>
+        </div>
+        
+        <div class="code-block mt">
+          <pre class="text-sm">
+git add main.py
+git commit -m "feat: add main.py with usage example"</pre>
+        </div>
+        
+        <div class="highlight-box mt" style="background: rgba(74, 222, 128, 0.1); border-color: #4ade80;">
+          <p class="text-sm" style="color: #4ade80;">✅ Commit 4/5 complété !</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

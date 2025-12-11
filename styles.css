@@ -457,11 +457,15 @@ h3 {
 
 /* Slide-specific enhancements */
 .slide-container {
-  width: 960px;
-  height: 540px;
+  width: 100%;
+  max-width: 960px;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   margin: 0 auto;
+  padding-bottom: 80px; /* Space for navigation */
+  box-sizing: border-box;
   /* Center the slide container on the page */
 }
 

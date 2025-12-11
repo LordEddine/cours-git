@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-warning">⭐ BONUS</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🎯 Créer et fermer une Issue</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content">
+    <div class="two-column gap-xl">
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">📝 Créer une Issue sur GitHub</h2>
+        <ol class="list-modern text-sm">
+          <li><span class="list-icon">1</span> Sur GitHub, onglet <strong>"Issues"</strong></li>
+          <li><span class="list-icon">2</span> Cliquez <strong>"New issue"</strong></li>
+          <li><span class="list-icon">3</span> Title: <code class="code-inline">feat: Ajouter méthode remove_task</code></li>
+          <li><span class="list-icon">4</span> Description:</li>
+        </ol>
+        <div class="highlight-box">
+          <pre class="text-sm text-muted">
+## Description
+Ajouter une méthode pour supprimer une tâche du gestionnaire.
+
+## Acceptation
+- [ ] Méthode `remove_task(index)` ajoutée
+- [ ] Retourne True si succès, False sinon
+- [ ] Tests ajoutés dans main.py</pre>
+        </div>
+        <p class="text-sm text-muted mt">5. Cliquez <strong>"Submit new issue"</strong></p>
+        <p class="text-sm text-muted">📌 Notez le numéro de l'issue (ex: <code class="code-inline">#1</code>)</p>
+      </div>
+      
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">🔧 Implémenter et fermer</h2>
+        <p class="text-sm text-muted mb">Ajoutez cette méthode dans <code class="code-inline">task_manager.py</code> :</p>
+        <div class="code-block">
+          <pre class="text-sm">
+def remove_task(self, index):
+    """Supprime une tâche par son index."""
+    if 0 <= index < len(self.tasks):
+        del self.tasks[index]
+        return True
+    return False</pre>
+        </div>
+        
+        <h3 class="text-md text-white mb-sm mt">💾 Commit magique</h3>
+        <div class="code-block">
+          <pre class="text-sm">
+git add task_manager.py
+git commit -m "feat: add remove_task method
+
+Closes #1"
+git push</pre>
+        </div>
+        
+        <div class="highlight-box mt" style="background: rgba(139, 92, 246, 0.2); border-color: #8b5cf6;">
+          <h3 class="text-md" style="color: #8b5cf6;">🪄 Magie de GitHub</h3>
+          <p class="text-sm text-muted">Les mots-clés <code class="code-inline">Closes #1</code>, <code class="code-inline">Fixes #1</code> ou <code class="code-inline">Resolves #1</code> ferment automatiquement l'issue lors du push !</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

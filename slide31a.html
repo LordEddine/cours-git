@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-accent">ÉTAPE 1</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">📂 Création du repository GitHub</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content">
+    <div class="card-modern mb">
+      <h2 class="text-lg text-primary mb">🌐 Sur GitHub.com</h2>
+      <ol class="list-modern text-sm">
+        <li><span class="list-icon">1</span> Connectez-vous à <strong>github.com</strong></li>
+        <li><span class="list-icon">2</span> Cliquez sur le bouton vert <strong>"New"</strong> (ou icône <code class="code-inline">+</code> → New repository)</li>
+        <li><span class="list-icon">3</span> Repository name : <code class="code-inline">task-manager</code></li>
+        <li><span class="list-icon">4</span> Description : <code class="code-inline">Gestionnaire de tâches en Python - Exercice Git</code></li>
+        <li><span class="list-icon">5</span> Visibilité : <strong>Public</strong> (pour que le prof puisse voir 😉)</li>
+        <li><span class="list-icon">6</span> ✅ Cochez <strong>"Add a README file"</strong></li>
+        <li><span class="list-icon">7</span> Cliquez sur <strong>"Create repository"</strong></li>
+      </ol>
+    </div>
+    
+    <div class="two-column gap-xl">
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">💻 Cloner le repository</h2>
+        <p class="text-sm text-muted mb">Ouvrez un terminal dans le dossier où vous voulez travailler :</p>
+        <div class="code-block">
+          <pre class="text-sm">
+# Cloner le repository
+git clone https://github.com/VOTRE_USERNAME/task-manager.git
+
+# Entrer dans le dossier
+cd task-manager
+
+# Vérifier que tout est OK
+git status</pre>
+        </div>
+      </div>
+      
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">✅ Résultat attendu</h2>
+        <p class="text-sm text-muted mb">Votre terminal devrait afficher :</p>
+        <div class="code-block" style="background: #1a1a2e;">
+          <pre class="text-sm" style="color: #4ade80;">
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean</pre>
+        </div>
+        <div class="highlight-box mt">
+          <p class="text-sm text-white">📁 Vous devriez avoir un dossier <code class="code-inline">task-manager</code> avec <code class="code-inline">README.md</code></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

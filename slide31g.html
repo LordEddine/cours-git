@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-accent">ÉTAPE 7</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🏁 Finalisation et Pull Request</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content">
+    <div class="two-column gap-xl">
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">💾 Dernier commit et push</h2>
+        <div class="code-block">
+          <pre class="text-sm">
+# Ajouter le README modifié
+git add README.md
+
+# Commit final
+git commit -m "docs: update README with full documentation"
+
+# Pousser la branche
+git push -u origin feature-manager</pre>
+        </div>
+        
+        <div class="highlight-box mt" style="background: rgba(74, 222, 128, 0.1); border-color: #4ade80;">
+          <p class="text-sm" style="color: #4ade80;">✅ Commit 5/5 complété !</p>
+        </div>
+        
+        <h2 class="text-lg text-primary mb mt">🔃 Créer la Pull Request #2</h2>
+        <ol class="list-modern text-sm">
+          <li><span class="list-icon">1</span> Sur GitHub, cliquez "Compare & pull request"</li>
+          <li><span class="list-icon">2</span> Title: <code class="code-inline">Feature: Add TaskManager and documentation</code></li>
+          <li><span class="list-icon">3</span> Ajoutez une description des changements</li>
+          <li><span class="list-icon">4</span> Créez et mergez la PR</li>
+        </ol>
+      </div>
+      
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">🧪 Tester votre projet</h2>
+        <p class="text-sm text-muted mb">Mettez à jour votre copie locale et testez :</p>
+        <div class="code-block">
+          <pre class="text-sm">
+# Retourner sur main
+git checkout main
+
+# Récupérer tous les changements
+git pull
+
+# Tester le projet
+python main.py</pre>
+        </div>
+        
+        <div class="highlight-box mt">
+          <h3 class="text-md text-white mb-sm">📤 Résultat attendu :</h3>
+          <div class="code-block" style="background: #1a1a2e;">
+            <pre class="text-sm" style="color: #4ade80;">
+=== Mes tâches ===
+0. ✅ Apprendre Git
+1. ⏳ Faire l'exercice
+2. ⏳ Réviser pour l'exam</pre>
+          </div>
+        </div>
+        
+        <h2 class="text-lg text-primary mb mt">📊 Vérifier l'historique</h2>
+        <div class="code-block">
+          <pre class="text-sm">
+# Voir tous les commits
+git log --oneline --graph
+
+# Voir les branches mergées
+git branch -a</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

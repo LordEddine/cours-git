@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-accent">ÉTAPE 2</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🚫 Création du .gitignore</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content">
+    <div class="two-column gap-xl">
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">📝 Créer le fichier .gitignore</h2>
+        <p class="text-sm text-muted mb">Créez le fichier avec la commande terminal :</p>
+        <div class="code-block">
+          <pre class="text-sm">
+# Créer le fichier (Git Bash / Linux / Mac)
+touch .gitignore
+
+# OU avec PowerShell (Windows)
+New-Item .gitignore -ItemType File</pre>
+        </div>
+        <p class="text-sm text-muted mb mt">Ouvrez le fichier dans VS Code et copiez-collez ce contenu :</p>
+        <div class="code-block">
+          <pre class="text-sm">
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Environnements virtuels
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Fichiers système
+.DS_Store
+Thumbs.db</pre>
+        </div>
+      </div>
+      
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">💾 Premier commit</h2>
+        <p class="text-sm text-muted mb">Ajoutez et committez le fichier :</p>
+        <div class="code-block">
+          <pre class="text-sm">
+# Ajouter le fichier
+git add .gitignore
+
+# Créer le commit
+git commit -m "feat: add .gitignore for Python project"
+
+# Pousser sur GitHub
+git push</pre>
+        </div>
+        
+        <div class="highlight-box mt">
+          <h3 class="text-md text-white mb-sm">📌 Convention de commit</h3>
+          <p class="text-sm text-muted">Utilisez des préfixes pour vos messages :</p>
+          <ul class="text-sm text-muted">
+            <li><code class="code-inline">feat:</code> nouvelle fonctionnalité</li>
+            <li><code class="code-inline">fix:</code> correction de bug</li>
+            <li><code class="code-inline">docs:</code> documentation</li>
+            <li><code class="code-inline">style:</code> formatage</li>
+          </ul>
+        </div>
+        
+        <div class="highlight-box mt" style="background: rgba(74, 222, 128, 0.1); border-color: #4ade80;">
+          <p class="text-sm" style="color: #4ade80;">✅ Commit 1/5 complété !</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-accent">ÉTAPE 3</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🌿 Branche feature-task</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content">
+    <div class="card-modern mb">
+      <h2 class="text-lg text-primary mb">🔀 Créer et basculer sur la branche</h2>
+      <div class="code-block">
+        <pre class="text-sm">
+# Créer une nouvelle branche et y basculer
+git checkout -b feature-task
+
+# Vérifier que vous êtes sur la bonne branche
+git branch</pre>
+      </div>
+      <p class="text-sm text-muted mt">Le résultat doit montrer <code class="code-inline">* feature-task</code> avec une étoile</p>
+    </div>
+    
+    <div class="two-column gap-xl">
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">🐍 Créer task.py</h2>
+        <p class="text-sm text-muted mb">Créez <code class="code-inline">task.py</code> dans VS Code (Ctrl+N, puis Ctrl+S) :</p>
+        <div class="code-block">
+          <pre class="text-sm">
+from datetime import datetime
+
+class Task:
+    """Représente une tâche individuelle."""
+    
+    def __init__(self, title, description=""):
+        self.title = title
+        self.description = description
+        self.completed = False
+        self.created_at = datetime.now()
+    
+    def complete(self):
+        """Marque la tâche comme complétée."""
+        self.completed = True
+    
+    def __str__(self):
+        status = "✅" if self.completed else "⏳"
+        return f"{status} {self.title}"</pre>
+        </div>
+      </div>
+      
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">💾 Commit et push</h2>
+        <div class="code-block">
+          <pre class="text-sm">
+# Ajouter le fichier
+git add task.py
+
+# Commit avec message descriptif
+git commit -m "feat: add Task class with basic functionality"
+
+# Pousser la branche sur GitHub
+git push -u origin feature-task</pre>
+        </div>
+        
+        <div class="highlight-box mt">
+          <h3 class="text-md text-white mb-sm">💡 Pourquoi -u ?</h3>
+          <p class="text-sm text-muted">L'option <code class="code-inline">-u</code> (ou <code class="code-inline">--set-upstream</code>) lie votre branche locale à la branche distante. Les prochains <code class="code-inline">git push</code> n'auront plus besoin de spécifier la branche.</p>
+        </div>
+        
+        <div class="highlight-box mt" style="background: rgba(74, 222, 128, 0.1); border-color: #4ade80;">
+          <p class="text-sm" style="color: #4ade80;">✅ Commit 2/5 complété !</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

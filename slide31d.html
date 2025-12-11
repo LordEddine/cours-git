@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-accent">ÉTAPE 4</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🔃 Créer une Pull Request</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content">
+    <div class="card-modern mb">
+      <h2 class="text-lg text-primary mb">🌐 Sur GitHub.com</h2>
+      <ol class="list-modern text-sm">
+        <li><span class="list-icon">1</span> Allez sur votre repository <code class="code-inline">task-manager</code> sur GitHub</li>
+        <li><span class="list-icon">2</span> Vous verrez un bandeau jaune : <strong>"feature-task had recent pushes"</strong></li>
+        <li><span class="list-icon">3</span> Cliquez sur <strong>"Compare & pull request"</strong></li>
+      </ol>
+    </div>
+    
+    <div class="two-column gap-xl">
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">📝 Remplir la Pull Request</h2>
+        <div class="highlight-box mb">
+          <p class="text-sm text-white"><strong>Title :</strong></p>
+          <code class="code-inline">Feature: Add Task class</code>
+        </div>
+        <div class="highlight-box">
+          <p class="text-sm text-white"><strong>Description :</strong></p>
+          <pre class="text-sm text-muted" style="white-space: pre-wrap;">
+## Description
+Ajout de la classe Task qui permet de gérer une tâche individuelle.
+
+## Changements
+- ✅ Création de `task.py`
+- ✅ Classe Task avec title, description, completed
+- ✅ Méthode `complete()` pour marquer une tâche
+
+## Tests effectués
+- [x] La classe s'instancie correctement
+- [x] La méthode complete() fonctionne</pre>
+        </div>
+      </div>
+      
+      <div class="card-modern">
+        <h2 class="text-lg text-primary mb">✅ Merger la Pull Request</h2>
+        <ol class="list-modern text-sm">
+          <li><span class="list-icon">1</span> Cliquez sur <strong>"Create pull request"</strong></li>
+          <li><span class="list-icon">2</span> Vérifiez les fichiers modifiés (onglet "Files changed")</li>
+          <li><span class="list-icon">3</span> Cliquez sur <strong>"Merge pull request"</strong></li>
+          <li><span class="list-icon">4</span> Cliquez sur <strong>"Confirm merge"</strong></li>
+          <li><span class="list-icon">5</span> Optionnel : Cliquez sur "Delete branch" pour nettoyer</li>
+        </ol>
+        
+        <div class="highlight-box mt">
+          <h3 class="text-md text-white mb-sm">🔄 Mettre à jour local</h3>
+          <div class="code-block" style="background: #1a1a2e;">
+            <pre class="text-sm">
+# Retourner sur main
+git checkout main
+
+# Récupérer les changements
+git pull</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>
