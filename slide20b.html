@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-primary">PARAMÈTRES</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🌑 -m — Message</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Qu'est-ce que c'est ?</h2>
+      <p class="text-base text-muted mb-lg"><code class="code-inline">-m</code> = <strong>message</strong><br>On l'utilise surtout avec <code class="code-inline">git commit</code> et <code class="code-inline">git tag</code>.</p>
+      
+      <div class="highlight-box mb-lg">
+        <p class="text-sm text-white"><strong>💡 Sans -m</strong> : Git ouvre ton éditeur pour écrire un message</p>
+        <p class="text-sm text-white"><strong>💡 Avec -m</strong> : Tu fournis directement le texte</p>
+      </div>
+      
+      <h2 class="text-lg text-primary mb">Astuce : Plusieurs -m</h2>
+      <p class="text-sm text-muted">Tu peux utiliser plusieurs <code class="code-inline">-m</code> pour séparer titre et description</p>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Exemples</h2>
+      <div class="terminal-modern">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Commit avec message simple</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git commit -m "Ajouter la route d'inscription"</span></div>
+          <br>
+          <div class="text-muted"># Commit avec titre + description</div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git commit -m "feat: ajouter endpoint" -m "Supporte vérification des doublons"</span></div>
+          <br>
+          <div class="text-muted"># Tag avec message</div>
+          <div><span class="prompt">$</span> <span class="command git-orange">git tag -m "Version stable" v1.0.0</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

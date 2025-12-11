@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-primary">PARAMÈTRES</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🌀 --abort / --continue & 🧹 -a</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">--abort / --continue — Gestion des conflits</h2>
+      <p class="text-sm text-muted mb">Lors d'un conflit (rebase ou merge), Git te demande quoi faire</p>
+      
+      <div class="terminal-modern mb-lg">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Pendant un rebase</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git rebase --continue</span> <span class="text-muted"># Continuer</span></div>
+          <div><span class="prompt">$</span> <span class="command git-orange">git rebase --abort</span> <span class="text-muted"># Annuler</span></div>
+          <br>
+          <div class="text-muted"># Pendant un merge</div>
+          <div><span class="prompt">$</span> <span class="command git-orange">git merge --abort</span> <span class="text-muted"># Annuler</span></div>
+          <br>
+          <div class="text-muted"># Pendant un cherry-pick</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git cherry-pick --continue</span></div>
+          <div><span class="prompt">$</span> <span class="command git-orange">git cherry-pick --abort</span></div>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <p class="text-sm text-white"><strong>💡 Astuce</strong></p>
+        <p class="text-xs text-muted"><code>--continue</code> = rejoue le commit suivant<br><code>--abort</code> = revient à l'état initial</p>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">-a — Auto-add fichiers suivis</h2>
+      <p class="text-sm text-muted mb">Ajoute automatiquement tous les fichiers <strong>déjà suivis</strong> modifiés</p>
+      
+      <div class="terminal-modern mb-lg">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Équivalent de : git add . + git commit</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git commit -a -m "Nettoyage"</span></div>
+          <br>
+          <div class="text-muted"># Forme courte combinée</div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git commit -am "Corrections rapides"</span></div>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <p class="text-sm git-orange"><strong>⚠️ Attention</strong></p>
+        <p class="text-xs text-muted"><code>-a</code> n'ajoute PAS les fichiers <strong>nouveaux</strong> (non trackés). Seulement les fichiers déjà connus de Git!</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

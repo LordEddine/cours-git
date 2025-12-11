@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-primary">PARAMÈTRES</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🌱 -u — Upstream</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Qu'est-ce que c'est ?</h2>
+      <p class="text-base text-muted mb-lg"><code class="code-inline">-u</code> vient de <strong>upstream</strong> (branche distante liée)</p>
+      
+      <div class="highlight-box mb-lg">
+        <p class="text-sm text-white"><strong>🔗 Ce que ça fait :</strong></p>
+        <p class="text-sm text-muted">Dit à Git : « Cette branche locale est liée à cette branche distante. »</p>
+      </div>
+      
+      <h2 class="text-lg text-primary mb">Quand l'utiliser ?</h2>
+      <ul class="list-modern">
+        <li><span class="list-icon">✓</span> La <strong>première fois</strong> que tu pushes une nouvelle branche</li>
+        <li><span class="list-icon">✓</span> Quand tu veux changer le lien upstream</li>
+      </ul>
+      
+      <div class="highlight-box mt-lg">
+        <p class="text-sm git-green"><strong>Après -u :</strong> Plus besoin de préciser origin/branche !</p>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">Exemples</h2>
+      <div class="terminal-modern">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Premier push avec -u</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git push -u origin ma-branche</span></div>
+          <br>
+          <div class="text-muted"># Après ça, plus besoin de préciser :</div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git push</span></div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git pull</span></div>
+          <br>
+          <div class="text-muted"># Changer l'upstream manuellement</div>
+          <div><span class="prompt">$</span> <span class="command git-orange">git branch --set-upstream-to=origin/main</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

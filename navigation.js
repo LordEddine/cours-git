@@ -6,9 +6,11 @@
     'slide06.html', 'slide07.html', 'slide08.html', 'slide09.html', 'slide10.html',
     'slide11.html', 'slide12.html', 'slide13.html', 'slide14.html', 'slide14b.html',
     'slide15.html', 'slide16.html', 'slide17.html', 'slide18.html', 'slide19.html',
-    'slide20.html', 'slide21.html', 'slide22.html', 'slide23.html', 'slide24.html',
-    'slide25.html', 'slide26.html', 'slide27.html', 'slide28.html', 'slide29.html',
-    'slide30.html', 'slide31.html', 'slide32.html', 'slide33.html'
+    'slide20.html', 'slide20a.html', 'slide20b.html', 'slide20c.html', 'slide20d.html',
+    'slide20e.html', 'slide20f.html', 'slide20g.html', 'slide20h.html', 'slide20i.html',
+    'slide21.html', 'slide22.html', 'slide23.html', 'slide24.html', 'slide25.html',
+    'slide26.html', 'slide27.html', 'slide28.html', 'slide29.html', 'slide30.html',
+    'slide31.html', 'slide32.html', 'slide33.html'
   ];
   
   const TOTAL_SLIDES = SLIDES.length;

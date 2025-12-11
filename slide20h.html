@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-primary">PARAMÈTRES</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🔐 Config, Branches & Merge</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">--global / --local / --system</h2>
+      <p class="text-sm text-muted mb">Niveaux de configuration Git</p>
+      
+      <div class="terminal-modern mb-lg">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Global (pour tout l'utilisateur)</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git config --global user.name "Eddine"</span></div>
+          <br>
+          <div class="text-muted"># Local (repo courant seulement)</div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git config user.name "Eddine"</span></div>
+          <br>
+          <div class="text-muted"># System (niveau machine)</div>
+          <div><span class="prompt">$</span> <span class="command git-orange">git config --system core.editor "code"</span></div>
+        </div>
+      </div>
+      
+      <h2 class="text-lg text-primary mb">-d / -D — Supprimer une branche</h2>
+      <div class="terminal-modern">
+        <div class="terminal-content-modern">
+          <div class="text-muted"># -d = refuse si non mergée</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git branch -d feature</span></div>
+          <br>
+          <div class="text-muted"># -D = force même si tu perds du code</div>
+          <div><span class="prompt">$</span> <span class="command git-orange">git branch -D feature</span></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">--no-ff — Merge avec commit forcé</h2>
+      <p class="text-sm text-muted mb">Crée un commit de merge même si fast-forward possible</p>
+      
+      <div class="terminal-modern mb-lg">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div><span class="prompt">$</span> <span class="command git-green">git merge --no-ff feature</span></div>
+        </div>
+      </div>
+      
+      <div class="highlight-box mb-lg">
+        <p class="text-sm text-white"><strong>💡 Pourquoi ?</strong></p>
+        <p class="text-xs text-muted">Pour garder la trace qu'il y avait une branche feature dans l'historique</p>
+      </div>
+      
+      <h2 class="text-lg text-primary mb">-v — Verbose</h2>
+      <div class="terminal-modern">
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Affiche plus d'informations</div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git status -v</span></div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git commit -v</span> <span class="text-muted"># Montre les diffs</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

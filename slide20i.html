@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-accent">RÉCAP</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🎭 Résumé des Paramètres Git</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content">
+    <div class="card-modern" style="max-width: 1000px; margin: 0 auto;">
+      <div class="row gap-xl">
+        <div style="flex: 1;">
+          <h3 class="text-base text-primary mb">Messages & Commits</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">-m</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Message de commit</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">--amend</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Modifier dernier commit</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">-a</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Auto-add fichiers suivis</td>
+            </tr>
+          </table>
+          
+          <h3 class="text-base text-primary mb mt-lg">Branches & Remote</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">-u</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Définir upstream</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">-d / -D</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Supprimer branche</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">--no-ff</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Merge avec commit</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div style="flex: 1;">
+          <h3 class="text-base text-primary mb">Mode Interactif</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">-i</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Mode interactif</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">-p</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Mode patch</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">-v</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Verbose</td>
+            </tr>
+          </table>
+          
+          <h3 class="text-base git-orange mb mt-lg">⚠️ Danger Zone</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">--force</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Push forcé</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">--hard</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Reset destructif</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">--abort</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Annuler opération</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div style="flex: 1;">
+          <h3 class="text-base text-primary mb">Configuration</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">--global</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Config utilisateur</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">--local</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Config repo</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">--system</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Config machine</td>
+            </tr>
+          </table>
+          
+          <h3 class="text-base git-green mb mt-lg">✅ Bonnes pratiques</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">--soft</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Reset safe</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">--continue</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Continuer rebase</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #30363d;">
+              <td style="padding: 8px 0;"><code class="code-inline">--force-with-lease</code></td>
+              <td style="padding: 8px 0; color: #8b949e;">Push forcé sécurisé</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

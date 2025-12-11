@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-primary">PARAMÈTRES</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🧪 Reset : --soft vs --mixed vs --hard</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content">
+    <div class="row gap-xl justify-center">
+      <div class="card-modern" style="flex: 1; max-width: 300px;">
+        <div class="text-center mb">
+          <span class="badge badge-secondary">SAFE</span>
+        </div>
+        <h2 class="text-lg git-green mb">--soft</h2>
+        <div class="terminal-modern mb">
+          <div class="terminal-content-modern">
+            <div><span class="prompt">$</span> <span class="command">git reset --soft HEAD~1</span></div>
+          </div>
+        </div>
+        <ul class="list-modern">
+          <li><span class="list-icon">✓</span> Retire le commit</li>
+          <li><span class="list-icon">✓</span> <strong>Garde dans staging</strong></li>
+          <li><span class="list-icon">✓</span> Garde les modifications</li>
+        </ul>
+        <div class="highlight-box mt">
+          <p class="text-xs text-muted">Parfait pour refaire un commit</p>
+        </div>
+      </div>
+      
+      <div class="card-modern" style="flex: 1; max-width: 300px;">
+        <div class="text-center mb">
+          <span class="badge badge-primary">DÉFAUT</span>
+        </div>
+        <h2 class="text-lg git-blue mb">--mixed</h2>
+        <div class="terminal-modern mb">
+          <div class="terminal-content-modern">
+            <div><span class="prompt">$</span> <span class="command">git reset HEAD~1</span></div>
+          </div>
+        </div>
+        <ul class="list-modern">
+          <li><span class="list-icon">✓</span> Retire le commit</li>
+          <li><span class="list-icon">✓</span> Retire du staging</li>
+          <li><span class="list-icon">✓</span> <strong>Garde les modifs</strong> (working dir)</li>
+        </ul>
+        <div class="highlight-box mt">
+          <p class="text-xs text-muted">Option par défaut si non spécifié</p>
+        </div>
+      </div>
+      
+      <div class="card-modern" style="flex: 1; max-width: 300px;">
+        <div class="text-center mb">
+          <span class="badge badge-accent">⚠️ DANGER</span>
+        </div>
+        <h2 class="text-lg git-orange mb">--hard</h2>
+        <div class="terminal-modern mb">
+          <div class="terminal-content-modern">
+            <div><span class="prompt">$</span> <span class="command">git reset --hard HEAD~1</span></div>
+          </div>
+        </div>
+        <ul class="list-modern">
+          <li><span class="list-icon">✓</span> Retire le commit</li>
+          <li><span class="list-icon">✓</span> Retire du staging</li>
+          <li><span class="list-icon">✗</span> <strong>EFFACE les modifications</strong></li>
+        </ul>
+        <div class="highlight-box mt">
+          <p class="text-xs git-orange">⚠️ Irréversible localement!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-primary">PARAMÈTRES</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🧭 -i — Interactive & 🔍 -p — Patch</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">-i = Interactive</h2>
+      <p class="text-sm text-muted mb">Permet de travailler en mode interactif</p>
+      
+      <div class="terminal-modern mb-lg">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Rebase interactif (très puissant!)</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git rebase -i HEAD~5</span></div>
+          <br>
+          <div class="text-muted"># Add interactif</div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git add -i</span></div>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <p class="text-sm text-white"><strong>Avec rebase -i tu peux :</strong></p>
+        <p class="text-xs text-muted">• Réécrire les messages • Fusionner des commits<br>• Supprimer un commit • Réorganiser l'historique</p>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">-p = Patch</h2>
+      <p class="text-sm text-muted mb">Sélectionne morceau par morceau d'un fichier</p>
+      
+      <div class="terminal-modern mb-lg">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Stager portion par portion</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git add -p</span></div>
+          <br>
+          <div class="text-muted"># Git demande pour chaque bloc :</div>
+          <div class="git-orange">Stage this hunk [y,n,q,a,d,s,e,?]?</div>
+          <br>
+          <div class="text-muted"># Stash partiel</div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git stash -p</span></div>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <p class="text-sm text-white"><strong>Options :</strong></p>
+        <p class="text-xs text-muted"><code>y</code>=oui <code>n</code>=non <code>e</code>=éditer <code>s</code>=diviser <code>q</code>=quitter</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>

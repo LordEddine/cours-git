@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"></head>
+<body class="col bg-gradient slide-container p-xl">
+  <div class="slide-header mb">
+    <div class="row items-center gap">
+      <span class="badge badge-accent">⚠️ DANGER</span>
+    </div>
+    <h1 class="text-3xl font-display text-white mb-sm">🚨 --force & 🧱 --amend</h1>
+    <div class="accent-line"></div>
+  </div>
+  
+  <div class="slide-content two-column gap-xl">
+    <div class="card-modern">
+      <h2 class="text-lg git-orange mb">--force / -f — Push forcé</h2>
+      <p class="text-sm text-muted mb">« Ignore l'historique du serveur. Remplace-le par le mien. »</p>
+      
+      <div class="terminal-modern mb-lg">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># ⚠️ Dangereux - peut écraser le travail des autres</div>
+          <div><span class="prompt">$</span> <span class="command git-orange">git push --force</span></div>
+          <br>
+          <div class="text-muted"># ✅ Version plus sûre (recommandée)</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git push --force-with-lease</span></div>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <p class="text-sm git-orange"><strong>⚠️ --force-with-lease</strong></p>
+        <p class="text-xs text-muted">Vérifie que personne n'a push entre temps. Si oui → refuse le force-push. <strong>Toujours préférer cette option!</strong></p>
+      </div>
+    </div>
+    
+    <div class="card-modern">
+      <h2 class="text-lg text-primary mb">--amend — Modifier le dernier commit</h2>
+      <p class="text-sm text-muted mb">Réécris le dernier commit : message, fichiers, corrections</p>
+      
+      <div class="terminal-modern mb-lg">
+        <div class="terminal-header-modern">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+        </div>
+        <div class="terminal-content-modern">
+          <div class="text-muted"># Modifier le message du dernier commit</div>
+          <div><span class="prompt">$</span> <span class="command git-green">git commit --amend</span></div>
+          <br>
+          <div class="text-muted"># Ajouter des fichiers oubliés</div>
+          <div><span class="prompt">$</span> <span class="command">git add fichier_oublie.py</span></div>
+          <div><span class="prompt">$</span> <span class="command git-blue">git commit --amend --no-edit</span></div>
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <p class="text-sm text-white"><strong>💡 Note importante</strong></p>
+        <p class="text-xs text-muted">Ça change l'historique → nécessite <code>push --force</code> si déjà sur GitHub</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="navigation.js"></script>
+</body>
+</html>
